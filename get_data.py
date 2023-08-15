@@ -46,11 +46,10 @@ def new_data_request(coin_id, dateRequest):
 
 
 # initializing the start and end date
-start_date = date(2021, 1, 4)
+start_date = date(2021, 1, 1)
 end_date = date(2023, 7, 31)
 
 coinNames = ['bitcoin', 'ethereum', 'tether', 'binancecoin', 'ripple', 'usd-coin', 'staked-ether', 'dogecoin', 'cardano', 'solana']
-# coinNames = ['ethereum', 'tether', 'binancecoin', 'ripple', 'usd-coin', 'staked-ether', 'dogecoin', 'cardano', 'solana']
 
 # iterating over the dates
 for d in rrule(DAILY, dtstart=start_date, until=end_date):

@@ -8,11 +8,9 @@
 <img src ="https://brightnode.io/wp-content/uploads/2022/10/Are-Cryptocurrencies-Securities-or-Commodities-Brightnode-consultancy-930x620.jpeg" width="300">
 <p>
 
-
 # **Objetivo**
 
 El mundo de las criptomonedas a tenido un crecimiento y adopción importante a nivel mundial. Este informe está dirigido a aquellas personas que no tengan tanto conocimiento de las criptomonedas y quieran comprender mejor este mercado para empezar a dar sus primeros acercamientos en este mundo.
-
 
 # **Introduccion Criptomonedas**
 
@@ -23,12 +21,11 @@ Una criptomoneda es un activo digital que emplea un cifrado criptográfico para 
 
 Las criptomonedas cuentan con diversas características diferenciadoras respecto a los sistemas tradicionales: no están reguladas ni controladas por ninguna institución y no requieren de intermediaros en las transacciones. Se usa una base de datos descentralizada, blockchain o registro contable compartido, para el control de estas transacciones.
 
-Al hilo de la regulación, las criptomonedas no tienen la consideración de medio de pago, no cuentan con el respaldo de un banco central u otras autoridades públicas y no están cubiertas por mecanismos de protección al cliente como el Fondo de Garantía de Depósitos o el Fondo de Garantía de Inversores.
+Al hilo de la regulación, las criptomonedas no tienen la consideración de medio de pago, no cuentan con el respaldo de un banco central u otras autoridades públicas y no están cubiertas por mecanismos de protección al cliente.
 
-En cuanto a la operativa de estas monedas digitales, es muy importante recordar que una vez que se realiza la transacción con criptomonedas, es decir, cuando se compra o vende el activo digital, no es posible cancelar la operación porque el blockchain es un registro que no permite borrar datos. Para “revertir” una transacción es necesario ejecutar la contraria.
+En cuanto a la operativa de estas monedas digitales, es muy importante recordar que una vez que se realiza la transacción con criptomonedas, es decir, cuando se compra o vende el activo digital, no es posible cancelar la operación porque el blockchain es un registro que no permite borrar datos. Para "revertir" una transacción es necesario ejecutar la contraria.
 
-Ya que estas monedas no están disponibles de forma física, hay que recurrir a un servicio de monedero digital de criptomonedas, que no está regulados para almacenarlas. 
-
+Como éstas monedas no están disponibles de forma física, hay que recurrir a un servicio de monedero digital de criptomonedas, que no está regulados para almacenarlas.
 
 # **Alcance**
 
@@ -59,7 +56,7 @@ Es importante recordar que este ranking es para un momento puntual, este era dis
 
 Entre ellas se encuentran algunas que en el entorno de los 10 años y algunas otras mas nuevas.
 
-### **Datos**
+# **Datos**
 
 Se utilizó [CoinGecko](https://www.coingecko.com/) para conocer las criptomonedas y se extrajeron los datos a travez de la [API CoinGecko](https://www.coingecko.com/en/api/documentation).
 
@@ -67,8 +64,20 @@ Las tres variables principales que se pueden obtener de una criptomoneda son,
 - `precio` (price): Precio de la criptomoneda
 - `capitalización de mercado` (market capitalization): es el valor total de una criptomoneda, precio de la criptomomneda por la cantidad total que existen.
 - `volumen` (24hr volume): Volumen de la criptomomneda en las ultimas 24 horas.
-- **Redes Sociales ????????????????**
 
+Esas se podian extrar mas facilmente con un endpoint (*/coins/{id}/market_chart/range*) que le pasabas el rango de tiempo y la moneda y te devolvia esas tres variables.
+
+### **Endpoint Hisotry**
+
+Pero como se queria ver si otros factores incidian como el de las redes sociales se opto por usar otro endpoint (*/coins/{id}/history*) que ademas de esos valores tambien traia algunas variables sobre redes sociales. La gran desventaja que traia era que no tenia rango de fecha y habia que hacerlo por cada dia.
+
+Se tomo un rango de 2 años y medio, para 10 monedas `2,5 años * 365 dias * 10 monedas = 9125` consultas.
+
+Teniendo en cuenta que la API Acepta 10-30 request por minuto se optó por esperar 5 segundos entre cada consulta (aprox 12 por minuto).   entre `9125/12 = 760 minutos = 12.6 hs`.
+
+Se dejó toda la noche levantando datos corriendo el [get_data.py](get_data.py) que se encargaba de consultar e ir guardando en un JSON [raw_coins_data.json](datasets/raw_coins_data.json).
+
+---
 ## **Estudio de monedas**
 
 ### **Dominio de la Bitcoin**
@@ -103,7 +112,13 @@ Las monedas estables respaldadas están sujetas a la misma volatilidad y riesgos
 
 Por mas que se afirma que hay un respaldo 1 a 1 del valor en USD de ambas monedas estables, han sido acusadas de ser incapaces de demostrarlo.
 
+# **Conclusiones**
 
+
+# **Herramientas**
+Se mencionan las tecnologías y herramientas utilizadas en el proyecto, así como la metodología aplicada de manera exhaustiva.
+
+Además, se presentan análisis detallados y conclusiones fundamentadas que demuestran un profundo entendimiento de los datos analizados.
 
 
 ---
