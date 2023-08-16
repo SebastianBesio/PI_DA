@@ -172,10 +172,12 @@ Mientras mas cercano a 0 menos fluctuaciones tiene la moneda. Por ejemplo las st
 
 # **Conclusiones**
 
-hay una gran variedad de tipos de criptomonedas las cuales se pueden utilizar con distintos fines.
+Hay una gran variedad de tipos de criptomonedas las cuales se pueden utilizar con distintos fines.
 
 En el caso que se quiera utilizar criptomonedas para poder hacer transacciones rápidas sin pasar por un sistema bancario tradicional y sin el riesgo de las fluctuaciones de precios conviene utilzar `stablecoins`.
 
-Si se quiere hacer inversiones a largo plazo se puede estudiar el promedio móvil de una moneda para un lapso grande de días e ir viendo como viene la tendencia general de la moneda. Dos monedas que aparentan estar en subida los últimos meses son `ethereum` y `bitcoin`, más allá de las fluctuaciones que puedan tener en los distintos días.
+Si se quiere hacer inversiones a largo plazo se puede estudiar el promedio móvil de una moneda para un lapso grande de días e ir viendo como viene la tendencia general de la moneda. Dos monedas que aparentan estar en subida los últimos meses son `ethereum` y `bitcoin`, más allá de las fluctuaciones que puedan tener en los distintos días. Estas inversiones en general son de menos riesgo.
+
+En el caso que se quiera hacer inversiones a corto plazo que pueden ser mas riesgosas recomendamos hacer mas estudios para comprender otras técnicas de predicción mas avanzadas. 
 
 Hay que tener cuidado con las monedas que hayan tenido el valor de precio máximo hace mucho tiempo y que hoy en día valgan una pequeña fracción de su máximo ya que no serían una buena inversion, ya que según lo que vemos en los datos porque probablemente sigan en un pequeño declive a medida que pase el tiempo.
