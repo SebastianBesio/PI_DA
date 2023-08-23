@@ -181,3 +181,9 @@ Si se quiere hacer inversiones a largo plazo se puede estudiar el promedio móvi
 En el caso que se quiera hacer inversiones a corto plazo que pueden ser mas riesgosas recomendamos hacer mas estudios para comprender otras técnicas de predicción mas avanzadas. 
 
 Hay que tener cuidado con las monedas que hayan tenido el valor de precio máximo hace mucho tiempo y que hoy en día valgan una pequeña fracción de su máximo ya que no serían una buena inversion, ya que según lo que vemos en los datos porque probablemente sigan en un pequeño declive a medida que pase el tiempo.
+
+# **Herramientas**
+
+- Python Scripts para levantar datos desde API CoinGecko.
+- Jupyter Notebooks pra hacer el EDA.
+- Power BI para el Dashboard.
